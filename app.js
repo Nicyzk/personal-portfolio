@@ -4,7 +4,6 @@ const path = require('path')
 const helmet = require('helmet')
 const compression = require('compression')
 const morgan = require('morgan')
-// require('dotenv').config()
 
 const app = express()
 
