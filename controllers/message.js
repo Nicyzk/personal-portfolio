@@ -24,9 +24,9 @@ exports.sendMessage = (req, res, next) => {
         if (err) throw new Error("Oops...Server-side error. Please email me manually and I'll fix this ASAP :(")
         const mailOptions = {
             from: 'nicyzk2@gmail.com',
-            to: 'nicyzk@gmail.com',
-            subject: 'Message from portfolio site',
-            text: 'This is a test',
+            to: ['nicyzk@gmail.com', msg.email],
+            subject: 'Reference mail from portfolio website',
+            text: 'Message',
             html: str
         };
         transporter.sendMail(mailOptions, function (error, info) {
